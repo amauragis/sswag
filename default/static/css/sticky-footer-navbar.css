@@ -1,0 +1,20 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 8em;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f5f5f5;
+    min-height: 2em !important;
+    padding: .5em 0;
+}
+
+.row {
+    margin: 0;
+}
+
+[class*="col-"] {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}

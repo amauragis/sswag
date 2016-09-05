@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block head %}
+<script src="galleria/galleria-1.4.5.min.js"></script>
+<style>
+    {
+        # TODO: Make this scale properly with size (ie mobile) #
+    }
+    .galleria {
+        width: 700px;
+        height: 400px;
+        background: #000
+    }
+</style>
+<title>Galleria Test</title>
+{% endblock %}
+
+{% block content %}
+{{ page_content }}
+<div class="galleria">
+    {% for img in images %}<img src="{{ img }}">{% endfor %}
+</div>
+
+<script>
+    {#      TODO: Look
+        into
+        lazy
+        loading
+        images#
+    }
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria');
+</script>
+{% endblock %}
+
+{% block last %}
+{% endblock %}
